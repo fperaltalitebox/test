@@ -1,0 +1,36 @@
+{
+  "name": "@my-app/root",
+  "version": "0.0.0",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "lint:fix": "turbo run lint:fix",
+    "prepare": "husky install",
+    "commit": "git-cz"
+  },
+  "devDependencies": {
+    "turbo": "latest"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "dependencies": {
+    "@commitlint/cli": "^17.6.5",
+    "@hellolitebox/commit-prompt": "^1.1.1",
+    "@hellolitebox/commitlint": "^1.1.3",
+    "commitizen": "^4.3.0",
+    "husky": "^8.0.3"
+  },
+  "packageManager": "yarn@1.22.19",
+  "config": {
+    "commitizen": {
+      "path": "@hellolitebox/commit-prompt"
+    }
+  }
+}
